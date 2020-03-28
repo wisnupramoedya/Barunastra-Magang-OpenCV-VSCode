@@ -13,18 +13,14 @@ Source:
 - Installing with [OpenCV VSCODE](https://medium.com/@divyendu.narayan/opencv-c-setup-for-microsoft-visual-studio-2019-and-visual-studio-code-in-windows-64-bit-911b1c733b3e)
 - Learning with [OpenCV Basic Tutorial](https://docs.opencv.org/2.4/doc/tutorials/tutorials.html)
 
-## =================================
 ## HOW TO OPEN THIS CODE WITH VSCODE
-## =================================
 You need to open x64 Native
 Add this:
 1. cd C:\
 2. E:
 3. cd E:\Programming\"Proyek Coding"\OpenCV
 
-## =====================
 ## DOCUMENTATION OF WORK
-## =====================
 
 ### Week - 1
 - [x] Learning threshold color with taskbar (image_threshold.exe)
