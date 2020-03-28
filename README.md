@@ -18,7 +18,7 @@ You need to open x64 Native
 Add this:
 1. cd C:\
 2. E:
-3. cd E:\Programming\"Proyek Coding"\OpenCV
+3. cd E:\Programming\\"Proyek Coding"\OpenCV
 
 ## DOCUMENTATION OF WORK
 
