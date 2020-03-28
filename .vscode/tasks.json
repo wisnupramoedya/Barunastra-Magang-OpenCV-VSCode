@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "msvc build",
+        "type": "shell",
+        "command": "cl.exe",
+        "args": [
+          "/EHsc",
+          "./src/${fileBasenameNoExtension}.cpp", // source file
+          "/IC:/opencv-4.2.0/opencv/build/include", //location of the OpenCV header Files
+          "/link",
+          "/LIBPATH:C:/opencv-4.2.0/opencv/build/x64/vc15/lib/Release", //location of lib files
+          "ade.lib", //lib files for OpenCV follow
+          "ade.lib",
+          "opencv_calib3d420.lib",
+          "opencv_core420.lib",
+          "opencv_dnn420.lib",
+          "opencv_features2d420.lib",
+          "opencv_flann420.lib",
+          "opencv_gapi420.lib",
+          "opencv_highgui420.lib",
+          "opencv_imgcodecs420.lib",
+          "opencv_imgproc420.lib",
+          "opencv_ml420.lib",
+          "opencv_objdetect420.lib",
+          "opencv_photo420.lib",
+          "opencv_stitching420.lib",
+          "opencv_ts420.lib",
+          "opencv_video420.lib",
+          "opencv_videoio420.lib",
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always"
+        },
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "run",
+        "type": "shell",
+        "command": "${fileBasenameNoExtension}",
+        "dependsOn":["msvc build"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+      }
+    ]
+  }
