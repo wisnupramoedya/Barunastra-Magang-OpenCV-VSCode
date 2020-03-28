@@ -33,7 +33,7 @@ Add this:
 Source:
 - [Threshold color in OpenCV](https://docs.opencv.org/3.4/da/d97/tutorial_threshold_inRange.html)
 
-## #Week - 2
+### Week - 2
 - [x] Find Contours
 - [x] Creating rectangle from image_threshold (-)
 - [ ] Max contour
