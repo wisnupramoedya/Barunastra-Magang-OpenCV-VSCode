@@ -12,7 +12,6 @@
           "/link",
           "/LIBPATH:C:/opencv-4.2.0/opencv/build/x64/vc15/lib/Release", //location of lib files
           "ade.lib", //lib files for OpenCV follow
-          "ade.lib",
           "opencv_calib3d420.lib",
           "opencv_core420.lib",
           "opencv_dnn420.lib",
