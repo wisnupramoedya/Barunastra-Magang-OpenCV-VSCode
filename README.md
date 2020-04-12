@@ -32,14 +32,14 @@ Source:
 ### Week - 2
 - [x] Find Contours
 - [x] Creating rectangle from image_threshold (-)
-- [ ] Max contour
+- [x] Max contour
 - [ ] Double rectangle different color
 - [ ] Implementation of Erode Dilate
 - [ ] Threshold image with mouse handling
 
 Note:
 - Green low(25, 4, 33) high(99, 104, 83)
-- Red low(0, 55, 32) high(180, 178, 166)
+- Red low(0, 32, 0) high(180, 130, 129)
 
 Source:
 - [Find Contours Circle](https://docs.opencv.org/2.4/doc/tutorials/imgproc/shapedescriptors/find_contours/find_contours.html)
