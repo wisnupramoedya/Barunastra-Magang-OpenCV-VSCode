@@ -16,8 +16,8 @@ void thresh_callback(int, void*);
 const int max_value_H = 360 / 2;
 const int max_value = 255;
 const String window_capture_name = "Video Capture";
-const String window_detection_name = "Green";
-const String window_detection_name2 = "Red";
+const String window_detection_name = "Red";
+const String window_detection_name2 = "Green";
 
 int low_H = 0, low_S = 0, low_V = 0;
 int high_H = max_value_H, high_S = max_value, high_V = max_value;
@@ -167,13 +167,9 @@ void thresh_callback(int, void*)
 {
 	vector<vector<Point> > contours;
 	findContours(frame_threshold, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
+
 	vector<vector<Point> > contours_poly(contours.size());
 	vector<Rect> boundRect(contours.size());
-
-	vector<vector<Point> > contours2;
-	findContours(frame_threshold2, contours2, RETR_TREE, CHAIN_APPROX_SIMPLE);
-	vector<vector<Point> > contours_poly2(contours2.size());
-	vector<Rect> boundRect2(contours2.size());
 
 	double size = 0;
 	int maxContour = 0;
@@ -185,28 +181,13 @@ void thresh_callback(int, void*)
 		}
 	}
 
-	double size2 = 0;
-	int maxContour2 = 0;
-	for (size_t i = 0; i < contours2.size(); i++)
-	{
-		if (contourArea(contours2[i]) > size2) {
-			size2 = contourArea(contours2[i]);
-			maxContour2 = i;
-		}
-	}
-
 	approxPolyDP(contours[maxContour], contours_poly[maxContour], 3, true);
 	boundRect[maxContour] = boundingRect(contours_poly[maxContour]);
-
-	approxPolyDP(contours2[maxContour2], contours_poly2[maxContour2], 3, true);
-	boundRect2[maxContour2] = boundingRect(contours_poly2[maxContour2]);
 
 	Mat drawing = frame;
 	
 	Scalar color = Scalar(0, 255, 0);
-	Scalar color2 = Scalar(0, 0, 255);
 	rectangle(drawing, boundRect[maxContour].tl(), boundRect[maxContour].br(), color, 2);
-	rectangle(drawing, boundRect2[maxContour2].tl(), boundRect2[maxContour2].br(), color2, 2);
 	
 	imshow("Result", drawing);
 }

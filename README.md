@@ -33,7 +33,7 @@ Source:
 - [x] Find Contours
 - [x] Creating rectangle from image_threshold (-)
 - [x] Max contour
-- [ ] Double rectangle different color
+- [x] Double rectangle different color
 - [ ] Implementation of Erode Dilate
 - [ ] Threshold image with mouse handling
 
